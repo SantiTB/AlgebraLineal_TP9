@@ -1,0 +1,52 @@
+\item Determinar en cada caso si $(V, \langle \cdot, \cdot \rangle)$ es un espacio vectorial con producto interno
+    \begin{enumerate}
+        \item $V= \mathbb{R}^2; \langle(x_1,y_1),(x_2,y_2)\rangle = x_1 x_2 - x_1 y_2 - y_1 x_2 + 3y_1 y_2$
+        \begin{mdframed}[style=s]
+                Hay que verificar las tres condiciones del producto interno
+                \begin{enumerate}
+                    \item $\langle \alpha u + v, w\rangle= \alpha \langle u,w \rangle + \langle v,w\rangle$\\
+                        Suponiendo (1) $u=(x_1,y_1), v=(x_2, y_2), w=(x_3,y_3)/ u,v,w\in \mathbb{R}^2, \alpha \in \mathbb{R}$
+                        \begin{align*}
+                            \langle \alpha u+v,w \rangle &= \langle \alpha(x_1,y_1) + (x_2,y_2),(x_3,y_3)\rangle &&\text{(1)}\\
+                            &= \langle (\alpha x_1 + x_2, \alpha y_1 + y_2),(x_3,y_3)\rangle &&\text{Prod y suma vec}\\
+                            &= (\alpha x_1 + x_2)x_3 - (\alpha x_1 + x_2)y_3 -(\alpha y_1 + y_2)x_3 + 3(\alpha y_1 + y_2)y_3 &&\text{Def P.I}\\
+                            &= \alpha x_1 x_3 + x_2 x_3 - \alpha x_1 y_3 - x_2 y_3 - \alpha y_1 x_3 - y_2 x_3 + 3 \alpha y_1 y_3 + 3 y_2 y_3 &&\text{Distributividad}\\
+                            &= \alpha x_1 x_3 - \alpha x_1 y_3 - \alpha y_1 x_3 + 3 \alpha y_1 y_3 + x_2 x_3 - x_2 y_3 - y_2 x_3 + 3 y_2 y_3 &&\text{Conmutatividad}\\
+                            &= \alpha( x_1 x_3 - x_1 y_3 -  y_1 x_3 + 3  y_1 y_3) + x_2 x_3 - x_2 y_3 - y_2 x_3 + 3 y_2 y_3 &&\text{Factor común}\\
+                            &= \alpha \langle (x_1,y_1), (x_3, y_3)\rangle + \langle(x_2,y_2),(x_3,y_3)\rangle &&\text{Def P.I}\\
+                            &= \alpha \langle u,w\rangle + \langle v,w \rangle &&\text{(1)}
+                        \end{align*}
+                    \item $\langle u,v \rangle = \overline{\langle v,u \rangle}$
+                        Como el conjugado no tiene sentido en $\mathbb{R}^2$, la condición se convierte en $\langle u,v \rangle = \langle v,u \rangle$
+                        \begin{align*}
+                            \langle u,v \rangle &= \langle (x_1, y_1), (x_2,y_2)\rangle &&\text{(1)}\\
+                            &=x_1 x_2 - x_1 y_2 - y_1 x_2 + 3 y_1 y_2 &&\text{Def P.I}\\
+                            &=x_2 x_1 - y_2 x_1 - x_2 y_1 + 3 y_2 y_1 &&\text{Conmutatividad producto}\\
+                            &=x_2 x_1 - x_2 y_1- y_2 x_1  + 3 y_2 y_1 &&\text{Conmutatividad suma}\\
+                            &=\langle (x_2,y_2),(x_1,y_1)\rangle &&\text{Def P.I}\\
+                            &=\langle v,u \rangle &&\text{(1)} 
+                        \end{align*}
+                    \item $\langle u,u \rangle > 0 \text{ }\forall u\neq 0$
+                        \begin{align*}
+                            \langle u,u\rangle &= \langle (x_1,y_1),(x_1,y_1)\rangle &&\text{(1)}\\
+                            &=x_1^2-x_1y_1-x_1y_1+3y_1^2 &&\text{Def P.I}\\
+                            &=x_1^2-2x_1y_1+3y_1^2\\
+                            &=(x_1-y_1)^2+2y_1^2 &&\text{Completando cuadrados}\\
+                            &>0 \text{ } \forall (x_1,y_1)=u\neq 0
+                        \end{align*}
+                \end{enumerate}
+                Como se cumplen las tres condiciones, se puede decir que $V$ es un espacio vectorial con producto interno.
+        \end{mdframed}
+        \item $V=\mathbb{R}^{2x2}; \langle A,B\rangle = a_{11}b_{11}+a_{12}b_{12}+a_{21}b_{21}+a_{22}b_{22}$
+            \begin{mdframed}[style=s]
+
+            \end{mdframed}
+        \item $V=\C^2;T\in L(\C^2,\C);\langle(x_1,y_1),(x_2,y_2)\rangle=T(x_1,y_1)\overline{T(x_2,y_2)}.$
+            \begin{mdframed}[style=s]
+                
+            \end{mdframed}
+        \item $V=\C[x];\langle p,q\rangle=\int_0^1p(t)\overline{q(t)}dt$
+            \begin{mdframed}[style=s]
+                
+            \end{mdframed}
+    \end{enumerate}
